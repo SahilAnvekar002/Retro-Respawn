@@ -16,19 +16,22 @@ export default function Home() {
   useEffect(() => {
 
     const onLoad = () => {
+      // Ensure scrolling happens after layout is stable
+      requestAnimationFrame(() => {
+        window.scrollTo(0, 0);
 
-      //setTimeout(() => {
-      window.scrollTo(0, 0);
-      //}, 100);
-
-      refs.current.forEach((ref) => {
-        if (ref && isInViewport(ref)) {
-          ref.classList.remove('opacity-0');
-          ref.classList.remove('translate-y-10');
-          ref.classList.add('opacity-100');
-        }
-      })
-    }
+        // Apply animations after scroll
+        requestAnimationFrame(() => {
+          refs.current.forEach((ref) => {
+            if (ref && isInViewport(ref)) {
+              ref.classList.remove('opacity-0');
+              ref.classList.remove('translate-y-10');
+              ref.classList.add('opacity-100');
+            }
+          });
+        });
+      });
+    };
 
     const onScroll = () => {
       refs.current.forEach((ref) => {

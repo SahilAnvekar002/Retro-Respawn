@@ -14,14 +14,16 @@ export default function Home() {
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-    refs.current.forEach((ref) => {
-      if (ref && isInViewport(ref)) {
-        ref.classList.remove('opacity-0');
-        ref.classList.remove('translate-y-10');
-        ref.classList.add('opacity-100');
-      }
-    })
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0);
+      refs.current.forEach((ref) => {
+        if (ref && isInViewport(ref)) {
+          ref.classList.remove('opacity-0');
+          ref.classList.remove('translate-y-10');
+          ref.classList.add('opacity-100');
+        }
+      })
+    }
 
     const onScroll = () => {
       refs.current.forEach((ref) => {
@@ -228,14 +230,14 @@ export default function Home() {
             <p className="text-lg text-slate-700 mt-2 mb-4 text-center">If you’re interested in becoming a e-sports player, would like to discuss partnership opportunities or have media queries, we’d love to hear from you.</p>
             <button className="px-6 py-2 bg-blue-700 text-white rounded-lg text-lg font-semibold hover:bg-blue-800 transition-colors duration-300 ease-in-out">Contact Us</button>
             <div className="flex mt-8">
-              <div className="rounded-full w-10 h-10 flex items-center justify-center mr-3 hover:brightness-75 transition-all duration-300 ease-out cursor-pointer"  style={{backgroundColor:'rgb(37, 42, 45)'}}>
-                <IconBrandLinkedin size={30} color="rgb(37, 42, 45)" fill="white"/>
+              <div className="rounded-full w-10 h-10 flex items-center justify-center mr-3 hover:brightness-75 transition-all duration-300 ease-out cursor-pointer" style={{ backgroundColor: 'rgb(37, 42, 45)' }}>
+                <IconBrandLinkedin size={30} color="rgb(37, 42, 45)" fill="white" />
               </div>
-              <div className="rounded-full w-10 h-10 flex items-center justify-center mr-3 hover:brightness-75 transition-all duration-300 ease-out cursor-pointer" style={{backgroundColor:'rgb(37, 42, 45)'}}>
-                <IconBrandInstagram size={30} color="rgb(37, 42, 45)" fill="white"/>
+              <div className="rounded-full w-10 h-10 flex items-center justify-center mr-3 hover:brightness-75 transition-all duration-300 ease-out cursor-pointer" style={{ backgroundColor: 'rgb(37, 42, 45)' }}>
+                <IconBrandInstagram size={30} color="rgb(37, 42, 45)" fill="white" />
               </div>
-              <div className="rounded-full w-10 h-10 flex items-center justify-center mr-3 hover:brightness-75 transition-all duration-300 ease-out cursor-pointer" style={{backgroundColor:'rgb(37, 42, 45)'}}>
-                <IconBrandTwitter size={30} color="rgb(37, 42, 45)" fill="white"/>
+              <div className="rounded-full w-10 h-10 flex items-center justify-center mr-3 hover:brightness-75 transition-all duration-300 ease-out cursor-pointer" style={{ backgroundColor: 'rgb(37, 42, 45)' }}>
+                <IconBrandTwitter size={30} color="rgb(37, 42, 45)" fill="white" />
               </div>
             </div>
           </div>

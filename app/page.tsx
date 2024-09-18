@@ -20,7 +20,7 @@ export default function Home() {
       setTimeout(() => {
         window.scrollTo(0, 0);
       }, 100);
-      
+
       refs.current.forEach((ref) => {
         if (ref && isInViewport(ref)) {
           ref.classList.remove('opacity-0');
@@ -41,7 +41,11 @@ export default function Home() {
     }
 
     window.addEventListener('scroll', onScroll);
-    window.addEventListener('load', onLoad);
+    if (document.readyState === 'complete') {
+      onLoad();
+    } else {
+      window.addEventListener('DOMContentLoaded', onLoad);
+    }
 
     return () => {
       window.removeEventListener('scroll', onScroll);

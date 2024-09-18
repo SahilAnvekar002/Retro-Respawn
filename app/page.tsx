@@ -17,9 +17,9 @@ export default function Home() {
 
     const onLoad = () => {
 
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-      }, 100);
+      //setTimeout(() => {
+      window.scrollTo(0, 0);
+      //}, 100);
 
       refs.current.forEach((ref) => {
         if (ref && isInViewport(ref)) {
@@ -45,11 +45,13 @@ export default function Home() {
       onLoad();
     } else {
       window.addEventListener('DOMContentLoaded', onLoad);
+      window.addEventListener('load', onLoad);
     }
 
     return () => {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('load', onLoad);
+      window.removeEventListener('DOMContentLoaded', onLoad);
     };
 
   }, [])

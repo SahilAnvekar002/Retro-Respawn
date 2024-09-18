@@ -1,12 +1,10 @@
 "use client"
 import { IconAdjustmentsShare, IconArrowRight, IconBrandInstagram, IconBrandLinkedin, IconBrandTwitter, IconRosetteDiscountCheck, IconWorld } from "@tabler/icons-react";
-import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 
 export default function Home() {
 
   const refs = useRef<(HTMLDivElement | null)[]>([]);
-  const router = useRouter();
 
   const isInViewport = (el: HTMLDivElement) => {
     const rect = el.getBoundingClientRect();
@@ -17,9 +15,20 @@ export default function Home() {
 
   useEffect(() => {
 
-    const handleRouteChange = () => {
-      window.scrollTo(0, 0); 
-    };
+    const onLoad = () => {
+
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 100);
+      
+      refs.current.forEach((ref) => {
+        if (ref && isInViewport(ref)) {
+          ref.classList.remove('opacity-0');
+          ref.classList.remove('translate-y-10');
+          ref.classList.add('opacity-100');
+        }
+      })
+    }
 
     const onScroll = () => {
       refs.current.forEach((ref) => {
@@ -31,17 +40,15 @@ export default function Home() {
       })
     }
 
-    router.events.on('routeChangeComplete', handleRouteChange);
     window.addEventListener('scroll', onScroll);
-    window.addEventListener('load', onScroll);
+    window.addEventListener('load', onLoad);
 
     return () => {
       window.removeEventListener('scroll', onScroll);
-      window.removeEventListener('load', onScroll);
-      router.events.off('routeChangeComplete', handleRouteChange);
+      window.removeEventListener('load', onLoad);
     };
 
-  }, [router.events])
+  }, [])
 
   return (
     <>

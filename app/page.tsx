@@ -14,7 +14,8 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+
+    const onLoad = () => {
       window.scrollTo(0, 0);
       refs.current.forEach((ref) => {
         if (ref && isInViewport(ref)) {
@@ -36,8 +37,11 @@ export default function Home() {
     }
 
     window.addEventListener('scroll', onScroll);
+    window.addEventListener('load', onLoad);
+
     return () => {
       window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('load', onLoad);
     };
 
   }, [])

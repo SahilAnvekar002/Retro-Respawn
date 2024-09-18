@@ -15,35 +15,38 @@ export default function Home() {
 
   useEffect(() => {
 
-    const onLoad = () => {
-      window.scrollTo(0, 0);
-      refs.current.forEach((ref) => {
-        if (ref && isInViewport(ref)) {
-          ref.classList.remove('opacity-0');
-          ref.classList.remove('translate-y-10');
-          ref.classList.add('opacity-100');
-        }
-      })
+    if (typeof window !== 'undefined') {
+
+      const onLoad = () => {
+        window.scrollTo(0, 0);
+        refs.current.forEach((ref) => {
+          if (ref && isInViewport(ref)) {
+            ref.classList.remove('opacity-0');
+            ref.classList.remove('translate-y-10');
+            ref.classList.add('opacity-100');
+          }
+        })
+      }
+
+      const onScroll = () => {
+        refs.current.forEach((ref) => {
+          if (ref && isInViewport(ref)) {
+            ref.classList.remove('opacity-0');
+            ref.classList.remove('translate-y-10');
+            ref.classList.add('opacity-100');
+          }
+        })
+      }
+
+      window.addEventListener('scroll', onScroll);
+      window.addEventListener('load', onLoad);
+
+      return () => {
+        window.removeEventListener('scroll', onScroll);
+        window.removeEventListener('load', onLoad);
+      };
+
     }
-
-    const onScroll = () => {
-      refs.current.forEach((ref) => {
-        if (ref && isInViewport(ref)) {
-          ref.classList.remove('opacity-0');
-          ref.classList.remove('translate-y-10');
-          ref.classList.add('opacity-100');
-        }
-      })
-    }
-
-    window.addEventListener('scroll', onScroll);
-    window.addEventListener('load', onLoad);
-
-    return () => {
-      window.removeEventListener('scroll', onScroll);
-      window.removeEventListener('load', onLoad);
-    };
-
   }, [])
 
   return (

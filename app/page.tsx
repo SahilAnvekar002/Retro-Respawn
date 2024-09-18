@@ -18,7 +18,9 @@ export default function Home() {
     const onLoad = () => {
       // Ensure scrolling happens after layout is stable
       requestAnimationFrame(() => {
-        window.scrollTo(0, 0);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+        }, 100);
 
         // Apply animations after scroll
         requestAnimationFrame(() => {

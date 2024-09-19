@@ -15,25 +15,25 @@ export default function Home() {
 
   useEffect(() => {
 
-    window.scrollTo(0, 0);
-
     const onLoad = () => {
       // Ensure scrolling happens after layout is stable
       requestAnimationFrame(() => {
         //setTimeout(() => {
-          window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
         //}, 100);
 
-        // Apply animations after scroll
-        requestAnimationFrame(() => {
-          refs.current.forEach((ref) => {
-            if (ref && isInViewport(ref)) {
-              ref.classList.remove('opacity-0');
-              ref.classList.remove('translate-y-20');
-              ref.classList.add('opacity-100');
-            }
+        setTimeout(() => {
+          // Apply animations after scroll
+          requestAnimationFrame(() => {
+            refs.current.forEach((ref) => {
+              if (ref && isInViewport(ref)) {
+                ref.classList.remove('opacity-0');
+                ref.classList.remove('translate-y-20');
+                ref.classList.add('opacity-100');
+              }
+            });
           });
-        });
+        }, 100);
       });
     };
 

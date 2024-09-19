@@ -73,7 +73,7 @@ export default function Home() {
 
       <section className="py-14 sm:py-28" style={{ backgroundColor: 'rgb(246, 244, 255)' }}>
         <div className="flex justify-center">
-          <div className="flex flex-col items-center w-full px-4 sm:px-10 md:px-0 md:w-[700px] justify-center transform translate-y-20 transition-[opacity,transform] duration-500 delay-700 opacity-0" ref={(el) => { refs.current[1] = el }}>
+          <div className="flex flex-col items-center w-full px-4 sm:px-10 md:px-0 md:w-[700px] justify-center transform translate-y-20 transition-[opacity,transform] duration-500 delay-500 opacity-0" ref={(el) => { refs.current[1] = el }}>
             <span className="text-lg font-bold text-blue-800 mb-6">RETRO RESPAWN</span>
             <h1 className="font-bold sm:text-4xl text-3xl text-center mb-4">Expanding beyond gaming to grow sports and technology</h1>
             <p className="text-lg text-slate-700 text-center">We exist to champion its growth, as well as to explore and create investment opportunities in sports and financial technology.</p>

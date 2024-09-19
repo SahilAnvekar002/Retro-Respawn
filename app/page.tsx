@@ -63,15 +63,15 @@ export default function Home() {
 
   return (
     <>
-      <section className="flex flex-col lg:bg-fixed bg-cover sm:h-[100vh] bg-home-bg lg:bg-left bg-right">
-        <div className="flex flex-col md:px-24 xl:px-36 2xl:px-48 pt-72 pb-56 sm:pb-0 sm:pt-56 transform translate-y-20 transition-[opacity,transform] duration-500 delay-300 opacity-0 md:items-start items-center" ref={(el) => { refs.current[0] = el }}>
+      <section className="flex flex-col lg:bg-fixed bg-cover h-[500px] sm:h-[100vh] bg-home-bg lg:bg-left bg-right">
+        <div className="flex flex-col md:px-24 xl:px-36 2xl:px-48 pt-64 sm:pt-56 transform translate-y-20 transition-[opacity,transform] duration-500 delay-300 opacity-0 md:items-start items-center" ref={(el) => { refs.current[0] = el }}>
           <h1 className="text-white text-5xl sm:text-6xl font-bold tracking-widest italic mb-6">TEAM PLAY<br />AND SOLO<br />CONQUESTS</h1>
           <span className="text-white font-semiold tracking-widest mb-10 text-lg ">Our gaming adventure awaits!</span>
           <button className="px-8 py-3 bg-white text-black w-72 rounded-lg text-xl font-semibold hover:bg-transparent hover:text-white  hover:border-white border-2 transition-colors duration-300 ease-in-out">Learn More</button>
         </div>
       </section>
 
-      <section className="my-14 sm:py-28" style={{ backgroundColor: 'rgb(246, 244, 255)' }}>
+      <section className="py-14 sm:py-28" style={{ backgroundColor: 'rgb(246, 244, 255)' }}>
         <div className="flex justify-center">
           <div className="flex flex-col items-center w-full px-4 sm:px-10 md:px-0 md:w-[700px] justify-center transform translate-y-20 transition-[opacity,transform] duration-500 delay-700 opacity-0" ref={(el) => { refs.current[1] = el }}>
             <span className="text-lg font-bold text-blue-800 mb-6">RETRO RESPAWN</span>

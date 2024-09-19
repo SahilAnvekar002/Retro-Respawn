@@ -81,14 +81,14 @@ export default function Home() {
         </div>
 
         <div className="flex lg:flex-row flex-col pt-36 sm:pt-52 lg:px-24 md:px-12 sm:pb-20 pb-10">
-          <div className="w-full lg:w-1/2 px-4 sm:px-10 transform translate-y-20 transition-[opacity,transform] duration-500 delay-300 opacity-0" ref={(el) => { refs.current[2] = el }}>
+          <div className="w-full lg:w-1/2 px-4 sm:px-10 transform translate-y-20 transition-[opacity,transform] duration-500 delay-500 sm:delay-300 opacity-0" ref={(el) => { refs.current[2] = el }}>
             <span className="text-lg font-bold text-blue-700">WHAT WE DO</span>
             <h1 className="font-bold text-3xl sm:text-4xl mt-5">We’re based in India</h1>
             <p className="text-lg text-slate-700 my-5">Our head office is located in Kolhapur, India. From here, we manage the support and services we offer across India.</p>
             <a href="#" className="text-blue-600 font-semibold text-lg flex items-center">Read more <IconArrowRight className="ml-1" style={{ marginTop: '2px' }} /></a>
           </div>
 
-          <div className="lg:mt-0 mt-12 flex flex-col items-end w-full lg:w-1/2 px-4 sm:px-10 transform translate-y-20 transition-[opacity,transform] duration-700 delay-1000 opacity-0" ref={(el) => { refs.current[3] = el }}>
+          <div className="lg:mt-0 mt-12 flex flex-col items-end w-full lg:w-1/2 px-4 sm:px-10 transform translate-y-20 transition-[opacity,transform] duration-700 delay-500 sm:delay-1000 opacity-0" ref={(el) => { refs.current[3] = el }}>
             <div className="lg:max-h-[400px] w-full">
               <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" className="rounded-2xl w-full lg:h-full sm:h-[500px] shadow-md object-cover" />
             </div>

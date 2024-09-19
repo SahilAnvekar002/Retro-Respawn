@@ -19,21 +19,19 @@ export default function Home() {
       // Ensure scrolling happens after layout is stable
       requestAnimationFrame(() => {
         //setTimeout(() => {
-        window.scrollTo(0, 0);
+          window.scrollTo(0, 0);
         //}, 100);
 
-        setTimeout(() => {
-          // Apply animations after scroll
-          requestAnimationFrame(() => {
-            refs.current.forEach((ref) => {
-              if (ref && isInViewport(ref)) {
-                ref.classList.remove('opacity-0');
-                ref.classList.remove('translate-y-20');
-                ref.classList.add('opacity-100');
-              }
-            });
+        // Apply animations after scroll
+        requestAnimationFrame(() => {
+          refs.current.forEach((ref) => {
+            if (ref && isInViewport(ref)) {
+              ref.classList.remove('opacity-0');
+              ref.classList.remove('translate-y-20');
+              ref.classList.add('opacity-100');
+            }
           });
-        }, 100);
+        });
       });
     };
 
@@ -66,7 +64,7 @@ export default function Home() {
   return (
     <>
       <section className="flex flex-col lg:bg-fixed bg-cover sm:h-[100vh] bg-home-bg lg:bg-left bg-right">
-        <div className="flex flex-col md:px-24 xl:px-36 2xl:px-48 pt-64 pb-44 sm:pb-0 sm:pt-56 transform translate-y-20 transition-[opacity,transform] duration-500 delay-300 opacity-0 md:items-start items-center" ref={(el) => { refs.current[0] = el }}>
+        <div className="flex flex-col md:px-24 xl:px-36 2xl:px-48 pt-64 pb-80 sm:pb-0 sm:pt-56 transform translate-y-20 transition-[opacity,transform] duration-500 delay-300 opacity-0 md:items-start items-center" ref={(el) => { refs.current[0] = el }}>
           <h1 className="text-white text-5xl sm:text-6xl font-bold tracking-widest italic mb-6">TEAM PLAY<br />AND SOLO<br />CONQUESTS</h1>
           <span className="text-white font-semiold tracking-widest mb-10 text-lg ">Our gaming adventure awaits!</span>
           <button className="px-8 py-3 bg-white text-black w-72 rounded-lg text-xl font-semibold hover:bg-transparent hover:text-white  hover:border-white border-2 transition-colors duration-300 ease-in-out">Learn More</button>

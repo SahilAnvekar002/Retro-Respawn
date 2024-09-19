@@ -71,7 +71,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 sm:py-28" style={{ backgroundColor: 'rgb(246, 244, 255)' }}>
+      <section className="my-14 sm:py-28" style={{ backgroundColor: 'rgb(246, 244, 255)' }}>
         <div className="flex justify-center">
           <div className="flex flex-col items-center w-full px-4 sm:px-10 md:px-0 md:w-[700px] justify-center transform translate-y-20 transition-[opacity,transform] duration-500 delay-700 opacity-0" ref={(el) => { refs.current[1] = el }}>
             <span className="text-lg font-bold text-blue-800 mb-6">RETRO RESPAWN</span>

@@ -8,11 +8,11 @@ function Footer() {
             <span className='text-white text-sm font-semibold'>Pages</span>
             <div className='flex '>
                 <ul className='mt-3 mb-10'>
-                    <li className='list-none mb-1'><a href="#" className='text-gray-400 font-semibold text-xs hover:text-blue-600 transition-colors duration-300 ease-in-out'>Home</a></li>
-                    <li className='list-none mb-1'><a href="#" className='text-gray-400 font-semibold text-xs hover:text-blue-600 transition-colors duration-300 ease-in-out'>About Us</a></li>
-                    <li className='list-none mb-1'><a href="#" className='text-gray-400 font-semibold text-xs hover:text-blue-600 transition-colors duration-300 ease-in-out'>Services</a></li>
-                    <li className='list-none mb-1'><a href="#" className='text-gray-400 font-semibold text-xs hover:text-blue-600 transition-colors duration-300 ease-in-out'>Contact Us</a></li>
-                    <li className='list-none mb-1'><a href="#" className='text-gray-400 font-semibold text-xs hover:text-blue-600 transition-colors duration-300 ease-in-out'>Blogs</a></li>
+                    <li className='list-none mb-1'><a href="/" className='text-gray-400 font-semibold text-xs hover:text-blue-600 transition-colors duration-300 ease-in-out'>Home</a></li>
+                    <li className='list-none mb-1'><a href="/about" className='text-gray-400 font-semibold text-xs hover:text-blue-600 transition-colors duration-300 ease-in-out'>About Us</a></li>
+                    <li className='list-none mb-1'><a href="/service" className='text-gray-400 font-semibold text-xs hover:text-blue-600 transition-colors duration-300 ease-in-out'>Services</a></li>
+                    <li className='list-none mb-1'><a href="/contact" className='text-gray-400 font-semibold text-xs hover:text-blue-600 transition-colors duration-300 ease-in-out'>Contact Us</a></li>
+                    <li className='list-none mb-1'><a href="/blog" className='text-gray-400 font-semibold text-xs hover:text-blue-600 transition-colors duration-300 ease-in-out'>Blogs</a></li>
                 </ul>
                 <div className='md:ml-80 sm:ml-44 ml-32'>
                     <IconBrandLinkedin size={30} color="rgb(37, 42, 45)" fill="white" className='mb-2 cursor-pointer'/>

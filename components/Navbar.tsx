@@ -24,11 +24,11 @@ function Navbar() {
           <h1 className='text-2xl text-white font-semibold tracking-widest'>Retro Respawn</h1>
         </div>
         <ul className='hidden md:flex md:pr-20 lg:pr-28 xl:pr-40'>
-          <li onClick={()=>{toggleSidebar()}} className='list-none'><Link href="/" className='text-white px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-white hover:text-black'>Home</Link></li>
-          <li onClick={()=>{toggleSidebar()}} className='list-none'><Link href="/about" className='text-white px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-white hover:text-black'>About</Link></li>
-          <li onClick={()=>{toggleSidebar()}} className='list-none'><Link href="/service" className='text-white px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-white hover:text-black'>Service</Link></li>
-          <li onClick={()=>{toggleSidebar()}} className='list-none'><Link href="/contact" className='text-white px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-white hover:text-black'>Contact</Link></li>
-          <li onClick={()=>{toggleSidebar()}} className='list-none'><Link href="/blog" className='text-white px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-white hover:text-black'>Blog</Link></li>
+          <li className='list-none'><Link href="/" className='text-white px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-white hover:text-black'>Home</Link></li>
+          <li className='list-none'><Link href="/about" className='text-white px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-white hover:text-black'>About</Link></li>
+          <li className='list-none'><Link href="/service" className='text-white px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-white hover:text-black'>Service</Link></li>
+          <li className='list-none'><Link href="/contact" className='text-white px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-white hover:text-black'>Contact</Link></li>
+          <li className='list-none'><Link href="/blog" className='text-white px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-white hover:text-black'>Blog</Link></li>
         </ul>
         <div className='flex md:hidden pr-10 md:pr-20 lg:pr-28 xl:pr-40'>
           <Squash toggled={isOpen} color='white' toggle={()=>{setIsOpen(!isOpen) , toggleSidebar()}} />
@@ -37,11 +37,11 @@ function Navbar() {
 
       <div className={`flex fixed top-0 right-0 bg-zinc-950 w-96 h-full flex-col items-center mb-6 z-20 py-28 transform translate-x-full transition-transform duration-300`} ref={ref}>
         <ul>
-          <li className='list-none mb-2'><Link href="/" className='text-white text-lg'>Home</Link></li>
-          <li className='list-none mb-2'><Link href="/about" className='text-white text-lg'>About</Link></li>
-          <li className='list-none mb-2'><Link href="/service" className='text-white text-lg'>Service</Link></li>
-          <li className='list-none mb-2'><Link href="/contact" className='text-white text-lg'>Contact</Link></li>
-          <li className='list-none mb-2'><Link href="/blog" className='text-white text-lg'>Blog</Link></li>
+          <li onClick={()=>{toggleSidebar()}} className='list-none mb-2'><Link href="/" className='text-white text-lg'>Home</Link></li>
+          <li onClick={()=>{toggleSidebar()}} className='list-none mb-2'><Link href="/about" className='text-white text-lg'>About</Link></li>
+          <li onClick={()=>{toggleSidebar()}} className='list-none mb-2'><Link href="/service" className='text-white text-lg'>Service</Link></li>
+          <li onClick={()=>{toggleSidebar()}} className='list-none mb-2'><Link href="/contact" className='text-white text-lg'>Contact</Link></li>
+          <li onClick={()=>{toggleSidebar()}} className='list-none mb-2'><Link href="/blog" className='text-white text-lg'>Blog</Link></li>
         </ul>
       </div>
     </>

@@ -88,7 +88,7 @@ function BlogPage({ blogs }: PropsType) {
                                     <img src={blog.urlToImage ? blog.urlToImage : 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} alt="" className={`object-cover  rounded-t-2xl h-full w-full ${classes.image}`} />
                                     <div className={`absolute top-0 left-0 bottom-0 right-0 ${classes.overlay}`} style={{ transition: 'background-color 0.4s ease', backgroundColor: 'rgba(255, 255, 255, 0)' }}></div>
                                 </div>
-                                <div className={`lg:pb-0 pb-10 pt-10 px-10 ${classes.content}`}>
+                                <div className={`lg:pb-0 pb-6 pt-6 sm:pt-10 px-6 sm:px-10 ${classes.content}`}>
                                     <h1 className="font-semibold sm:text-2xl text-xl">{blog.title.length < 80 ? blog.title : blog.title.substring(0, 80) + '...'}</h1>
                                 </div>
                             </Link>

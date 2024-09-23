@@ -81,7 +81,7 @@ function BlogPage({ blogs }: PropsType) {
                     <p className="text-lg sm:text-2xl text-slate-700 text-center">Find all of our latest stories and news about retro respawn.</p>
                 </div>
                 <div className='flex xl:px-0 lg:px-24 sm:px-10 px-4 w-full xl:w-[1200px] flex-wrap transform translate-y-20 transition-[opacity,transform] duration-500 delay-700 opacity-0' ref={(el)=>{refs.current[1] = el}}>
-                    {blogs.map((blog, i) => {
+                    {blogs.length>0 && blogs.map((blog, i) => {
                         return (
                             <Link href={blog.url} target='_blank' key={i} className={`flex w-full lg:w-[48%] xl:w-[32%] flex-col border-2 lg:h-[470px] rounded-2xl mb-5 lg:mr-4 ${classes.card}`} style={{ borderColor: 'rgba(0, 0, 0, 0.05)', boxShadow: 'rgba(0, 0, 0, 0.25) 0px 10px 30px -20px' }}>
                                 <div className='h-[270px] overflow-hidden'>

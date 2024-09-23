@@ -207,19 +207,19 @@ export default function HomePage({ blogs }: PropsType) {
             <section className="py-12 sm:py-24" style={{ backgroundColor: 'rgb(246, 244, 255)' }}>
                 <div className="flex xl:flex-row flex-col xl:items-center lg:px-24 md:px-12">
 
-                    <Link href={blogs[0].url} target="_blank" className="w-full xl:w-[70%] px-4 sm:px-10">
+                    {blogs.length > 0 && <Link href={blogs[0].url} target="_blank" className="w-full xl:w-[70%] px-4 sm:px-10">
                         <div className="flex flex-col justify-end h-[400px] bg-center bg-cover rounded-xl shadow-md cursor-pointer hover:brightness-75 transition-all duration-300" style={{ backgroundImage: `url('${blogs[0].urlToImage}')` }}>
                             <div className="px-10 pb-6 pt-4 rounded-b-xl" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
                                 <h1 className="text-white font-bold text-xl sm:text-2xl">{blogs[0].title.length < 50 ? blogs[0].title : blogs[0].title.substring(0, 50)}</h1>
                                 <p className="text-lg text-slate-200 mt-2">{blogs[0].description.length < 100 ? blogs[0].description : blogs[0].description.substring(0, 100) + '...'}</p>
                             </div>
                         </div>
-                    </Link>
+                    </Link>}
 
                     <div className="w-full xl:w-[30%] xl:px-0 px-4 sm:px-10 xl:mt-0 mt-10">
                         <h1 className="font-bold text-2xl sm:text-3xl xl:text-2xl xl:mb-4 mb-8">Latest news</h1>
                         <div className="flex flex-col">
-                            {blogs.map((blog, i) => {
+                            {blogs.length>0 && blogs.map((blog, i) => {
                                 if (blog.title != blogs[0].title) {
                                     return (
                                         <Link href={blog.url} target="_blank" className="flex h-20 bg-white rounded-xl shadow-md cursor-pointer mb-4" key={i}>
